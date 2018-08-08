@@ -64,12 +64,12 @@
     <div class="content-main">
         <div class="subscribe">
             <h4>New Customer?</h4>
-            <form action="#" method="post">
-                <input type="text" name="Search" placeholder="First Name" required="">
-                <input type="text" name="Search" placeholder="Last Name" required="">
-                <input type="text" name="Search" placeholder="Company" required="">
-                <input type="email" name="Search" placeholder="Email" required="">
-                <input type="password" name="Password" placeholder="Password" required="">
+            <form id="SignUp" action="#" method="post" >
+                <input type="text" name="Search" placeholder="First Name" required="" id = "fname">
+                <input type="text" name="Search" placeholder="Last Name" required="" id = "lname">
+                <input type="text" name="Search" placeholder="Company" required="" id = "company">
+                <input type="email" name="Search" placeholder="Email" required="" id = "email">
+                <input type="password" name="Password" placeholder="Password" required="" id = "password">
                 <input type="password" name="Password" placeholder="Confirm Password" required="">
                 <input type="submit" value="Sign Up">
             </form>
@@ -80,5 +80,7 @@
 </div>
 </div>
 </div>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
