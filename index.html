@@ -27,7 +27,25 @@
         }
       });
     });
+    window.onload = function() {
+    var realBtn = document.getElementById("file");
+    var customBtn = document.getElementById("file-button");
+    var customTxt = document.getElementById("button-text");
+    
+    customBtn.addEventListener("click", function() {
+        realBtn.click();
+    });
+    
+    realBtn.addEventListener("change", function() {
+        if (realBtn.value) {
+            customTxt.innerHTML = realBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+        } else {
+            customTxt.innerHTML = "No File Chosen" ;
+        }
+    });
+    }
 </script>
+
 </head>
 <body>
 <div class="main">
@@ -68,6 +86,9 @@
                 <input type="text" name="Search" placeholder="First Name" required="">
                 <input type="text" name="Search" placeholder="Last Name" required="">
                 <input type="text" name="Search" placeholder="Company" required="">
+                <input type="file" id="file" required="" hidden="hidden">
+                <button type="button" id="file-button">Upload Company Logo</button>
+                <span id="button-text">No File Chosen</span>
                 <input type="email" name="Search" placeholder="Email" required="">
                 <input type="password" name="Password" placeholder="Password" required="">
                 <input type="password" name="Password" placeholder="Confirm Password" required="">
