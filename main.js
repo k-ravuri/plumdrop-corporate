@@ -21,10 +21,10 @@ function submitForm(e){
   e.preventDefault();
 
   // Get values
-  var fname = getInputVal('fname');
-  var lname = getInputVal('lname');
-  var company = getInputVal('company');
-  var email = getInputVal('email');
+  var fname = getInputVal('fname').toLowerCase();
+  var lname = getInputVal('lname').toLowerCase();
+  var company = getInputVal('company').toLowerCase();
+  var email = getInputVal('email').toLowerCase();
   var password = getInputVal('password');
 
   // Save message
@@ -49,7 +49,7 @@ function getInputVal(id){
 
 // Save message to firebase
 function saveMessage(fname, lname, company, email, password){
-  var newComapnyChild = messagesRef.child(company);
+  var newComapnyChild = messagesRef.child(company)
   var newMessageRef = newComapnyChild.push();
   newMessageRef.set({
     fname: fname,
