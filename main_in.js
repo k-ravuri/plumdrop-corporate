@@ -11,15 +11,7 @@
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('Users');
-messagesRef.on('value', gotData);
-var companies;
-var keys;
-var log_in = false;
-
-function gotData(data){
-  companies = data.val();
-  keys = Object.keys(companies);
-}
+var companies = ;
 
 // Listen for form submit
 document.getElementById('SignIn').addEventListener('submit', submitForm);
@@ -32,7 +24,6 @@ function submitForm(e){
   var company = getInputVal('company');
   var email = getInputVal('email');
   var password = getInputVal('password');
-  consloe.log(keys);
   auth = firebase.auth();
   auth.signInWithEmailAndPassword(email,password);
   promise.catch(e => console.log(e.message));
