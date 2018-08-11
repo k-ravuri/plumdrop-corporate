@@ -12,15 +12,19 @@
 // Reference messages collection
 var messagesRef = firebase.database().ref('Users');
 
-
 // Listen for form submit
 document.getElementById('SignUp').addEventListener('submit', submitForm);
+
 
 // Submit form
 function submitForm(e){
   e.preventDefault();
 
   // Get values
+  var file = e.target.files[0];
+
+  var storageRef = firebase.storage().ref();
+  var uploadRef = storageRef.child("company_logos/" + file.name).put(file);
   var fname = getInputVal('fname').toLowerCase();
   var lname = getInputVal('lname').toLowerCase();
   var company = getInputVal('company').toLowerCase();
