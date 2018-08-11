@@ -43,16 +43,6 @@
             customTxt.innerHTML = "No File Chosen" ;
         }
     });
-<<<<<<< HEAD
-=======
-    document.getElementById('SignUp').addEventListener('submit', function(e){
-        var file = realBtn;
-        var storageRef = firebase.storage().ref();
-        var uploadRef = storageRef.child("company_logos/" + file.name);
-        uploadRef.put(file);
-
-      });
->>>>>>> ec4d0cdb8d311dc9fa4503ec51b69e631cf8dbd3
     }
 </script>
 </head>
@@ -92,20 +82,13 @@
         <div class="subscribe">
             <h4>New Customer?</h4>
             <form id="SignUp" action="#" method="post" name="SignUp">
-                <input type="text" name="Search" placeholder="First Name" required="" id = "fname">
-                <input type="text" name="Search" placeholder="Last Name" required="" id = "lname">
                 <input type="text" name="Search" placeholder="Company" required="" id = "company">
                 <input type="file" id="file" required="" hidden="hidden">
                 <button type="button" id="file-button">Upload Company Logo</button>
                 <span id="button-text">No File Chosen</span>
-                <input type="email" name="Search" placeholder="Email" required="" id = "email">
                 <input type="password" name="Password" placeholder="Password" required="" id = "password">
                 <input type="password" name="Password" placeholder="Confirm Password" required="">
-<<<<<<< HEAD
-                <input type="submit" value="Sign Up" name = "submit">
-=======
-                <input type="submit" value="Sign Up" name = submit"> 
->>>>>>> ec4d0cdb8d311dc9fa4503ec51b69e631cf8dbd3
+                <input type="submit" value="Sign Up" name = submit">
             </form>
         </div>
     </div>

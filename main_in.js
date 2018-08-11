@@ -11,7 +11,7 @@
 
 // Reference messages collection
 var messagesRef = firebase.database().ref('Users');
-
+var companies = ;
 
 // Listen for form submit
 document.getElementById('SignIn').addEventListener('submit', submitForm);
@@ -21,14 +21,13 @@ function submitForm(e){
   e.preventDefault();
 
   // Get values
-  var fname = getInputVal('fname');
-  var lname = getInputVal('lname');
   var company = getInputVal('company');
   var email = getInputVal('email');
   var password = getInputVal('password');
+  auth = firebase.auth();
+  auth.signInWithEmailAndPassword(email,password);
+  promise.catch(e => console.log(e.message));
 
-  // Save message
-  saveMessage(fname, lname ,company, email, password);
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -39,7 +38,7 @@ function submitForm(e){
   },3000);
 
   // Clear form
-  document.getElementById('SignUp').reset();
+  document.getElementById('SignIn').reset();
 }
 
 // Function to get get form values
@@ -47,15 +46,3 @@ function getInputVal(id){
   return document.getElementById(id).value;
 }
 
-// Save message to firebase
-function saveMessage(fname, lname ,company, email, password){
-  var messagesRefCompany = messagesRef.ref(company);
-  var newMessageRef = messagesRefCompany.push();
-  newMessageRef.set({
-    fname: fname,
-    lname: lname,
-    email:email,
-    organizer:false,
-    password:password,
-  });
-}
