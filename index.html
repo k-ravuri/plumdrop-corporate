@@ -11,50 +11,6 @@
 <script src="jquery-1.11.1.min.js"></script>
 <script src="responsiveslides.js"></script>
 <link href="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"/>
-<script>
-    $(function () {
-      $("#slider4").responsiveSlides({
-        auto: true,
-        pager:true,
-        nav:false,
-        speed: 400,
-        namespace: "callbacks",
-        before: function () {
-          $('.events').append("<li>before event fired.</li>");
-        },
-        after: function () {
-          $('.events').append("<li>after event fired.</li>");
-        }
-      });
-    });
-    window.onload = function() {
-    var realBtn = document.getElementById("file");
-    var customBtn = document.getElementById("file-button");
-    var customTxt = document.getElementById("button-text");
-    
-    customBtn.addEventListener("click", function() {
-        realBtn.click();
-    });
-    
-    realBtn.addEventListener("change", function() {
-        if (realBtn.value) {
-            customTxt.innerHTML = realBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-        } else {
-            customTxt.innerHTML = "No File Chosen" ;
-        }
-    });
-<<<<<<< HEAD
-=======
-    document.getElementById('SignUp').addEventListener('submit', function(e){
-        var file = realBtn;
-        var storageRef = firebase.storage().ref();
-        var uploadRef = storageRef.child("company_logos/" + file.name);
-        uploadRef.put(file);
-
-      });
->>>>>>> ec4d0cdb8d311dc9fa4503ec51b69e631cf8dbd3
-    }
-</script>
 </head>
 <body>
 <div class="main">
@@ -101,15 +57,11 @@
                 <input type="email" name="Search" placeholder="Email" required="" id = "email">
                 <input type="password" name="Password" placeholder="Password" required="" id = "password">
                 <input type="password" name="Password" placeholder="Confirm Password" required="">
-<<<<<<< HEAD
-                <input type="submit" value="Sign Up" name = "submit">
-=======
                 <input type="submit" value="Sign Up" name = submit"> 
->>>>>>> ec4d0cdb8d311dc9fa4503ec51b69e631cf8dbd3
             </form>
         </div>
     </div>
-    <div class="clear"> </div>
+    <!-- <div class="clear"> </div> -->
 </div>
 </div>
 </div>
