@@ -20,6 +20,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Listen for form submit
 document.getElementById('SignIn').addEventListener('submit', submitForm);
 
+// Submit form page change
+// Form submission response
+document.getElementById("SignIn").onclick = function () {
+        location.href = "sample.html";
+};
+
+
 // Submit form
 function submitForm(e){
 
