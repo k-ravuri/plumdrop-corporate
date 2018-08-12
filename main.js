@@ -47,6 +47,11 @@ function submitForm(e){
   document.getElementById('SignUp').reset();
 }
 
+// Form submission response
+document.getElementById("submit").onclick = function () {
+        location.href = "sample.html";
+    };
+
 $(function () {
       $("#slider4").responsiveSlides({
         auto: true,

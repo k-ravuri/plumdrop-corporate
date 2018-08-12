@@ -361,19 +361,20 @@ h1 {
     float:left;
 	width:50%;
     background: rgba(204, 204, 204, 0.7);
-    height: 597px;
+    height: 600px;
 }
 .content-main{
 	float:left;
     background: rgba(0, 0, 0, 0.40);
 	width:50%;
+    height: 600px;
 }
 .subscribe{
 	background: rgba(0, 0, 0, 0.40);
-    padding: 3em;
-    min-height: 426px;
+    padding: 1.75em;
 }
-.subscribe h3{
+.subscribe h4{
+    text-align: center;
     color: #FFFFFF;
     font-size: 2em;
     margin: 0 0 1em 0;
@@ -424,6 +425,7 @@ h1 {
     color: #ffffff;
     font-size: .9em;
     text-decoration: none;
+    margin: 0 0 0 1.5em;
     padding: 1em 2em;
     cursor: pointer;
     background-color: rebeccapurple;
