@@ -1,30 +1,10 @@
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDnxO0uJ3uLnnuapAIzDEsAoEDpuhNXFUI",
-    authDomain: "plumdrop-business.firebaseapp.com",
-    databaseURL: "https://plumdrop-business.firebaseio.com",
-    projectId: "plumdrop-business",
-    storageBucket: "plumdrop-business.appspot.com",
-    messagingSenderId: "1014652124168"
-};
-firebase.initializeApp(config);
-
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    var user = firebase.auth().currentUser;
+    window.location.replace("sample.html");
   } else {
     console.log("invalid login");
   }
 });
-
-// Listen for form submit
-document.getElementById('SignIn').addEventListener('submit', submitForm);
-
-// Submit form page change
-// Form submission response
-document.getElementById("SignIn").onclick = function () {
-        location.href = "sample.html";
-};
 
 
 // Submit form
@@ -43,5 +23,9 @@ function submitForm(e){
     // ...
   });
 }
+
+function logOut(e) {
+      firebase.auth().signOut();
+ }
 
 

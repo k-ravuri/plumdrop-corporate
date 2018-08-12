@@ -68,12 +68,12 @@
     <div class="content-main">
         <div class="subscribe">
             <h4>Customer Sign In</h4>
-            <form action="#" method="post">
+            <div action="#" method="post">
                 <input type="email" name="Search" placeholder="Email" required="" id = "email">
                 <input type="text" name="Search" placeholder="Company" required="" id = "company">
                 <input type="password" name="Password" placeholder="Password" required="" id = "password">
-                <input type="submit" value="Sign In" id = "SignIn">
-            </form>
+                <button onclick="submitForm()">Sign In</button>
+            </div>
         </div>
     </div>
     <div class="clear"> </div>
@@ -82,6 +82,18 @@
 </div>
 </div>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyDnxO0uJ3uLnnuapAIzDEsAoEDpuhNXFUI",
+    authDomain: "plumdrop-business.firebaseapp.com",
+    databaseURL: "https://plumdrop-business.firebaseio.com",
+    projectId: "plumdrop-business",
+    storageBucket: "plumdrop-business.appspot.com",
+    messagingSenderId: "1014652124168"
+  };
+  firebase.initializeApp(config);
+  </script>
   <script src="main_in.js"></script>
 </body>
 </html>
