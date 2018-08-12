@@ -34,6 +34,7 @@ function submitForm(e){
   auth = firebase.auth();
   var promise = auth.createUserWithEmailAndPassword(email,password);
   promise.catch(e => console.log(e.message));
+  
 
   // Show alert
   document.querySelector('.alert').style.display = 'block';
@@ -50,7 +51,7 @@ function submitForm(e){
 // Form submission response
 document.getElementById("submit").onclick = function () {
         location.href = "sample.html";
-    };
+};
 
 $(function () {
       $("#slider4").responsiveSlides({
