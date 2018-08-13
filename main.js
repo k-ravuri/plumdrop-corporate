@@ -50,7 +50,7 @@ function submitForm(e){
 
 // Form submission response
 document.getElementById("submit").onclick = function () {
-        location.href = "sample.html";
+        location.href = "event.html";
 };
 
 $(function () {

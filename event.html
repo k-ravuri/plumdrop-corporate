@@ -60,6 +60,9 @@
                 </select>
                 <input type="submit" value="submit" id = "submit">
             </form>
+            <div>
+                <button onclick="logOut()">LogOut</button>
+            </div>
         </div>
     </div>
     </div>
@@ -67,6 +70,18 @@
 </div>
 </div>
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script src="main_in.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyDnxO0uJ3uLnnuapAIzDEsAoEDpuhNXFUI",
+    authDomain: "plumdrop-business.firebaseapp.com",
+    databaseURL: "https://plumdrop-business.firebaseio.com",
+    projectId: "plumdrop-business",
+    storageBucket: "plumdrop-business.appspot.com",
+    messagingSenderId: "1014652124168"
+  };
+  firebase.initializeApp(config);
+  </script>
+  <script src="event.js"></script>
 </body>
 </html>

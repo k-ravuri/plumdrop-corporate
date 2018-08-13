@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    window.location.replace("sample.html");
+    window.location.replace("event.html");
   } else {
     console.log("invalid login");
   }
