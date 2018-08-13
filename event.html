@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Plumdrop: Company Events</title>
+<link href="main3.css" rel="stylesheet" type="text/css" media="all"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link href="fonts.css" rel="stylesheet"> 
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<script src="jquery-1.11.1.min.js"></script>
+<script src="responsiveslides.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"/>
+</head>
+<body>
+<div class="main">
+<div class="profile">
+<div class="wrap">
+<div class="grids">
+<div class="content">
+<img id="company_image" src="images/Screen%20Shot%202018-08-04%20at%207.28.05%20PM.png" width = 60%></div>
+    
+    <div class="content-left">
+        <div class="subscribe">
+            <h4>Event Details</h4>
+            <form id ="form1" action="#" method="post">
+                <input type="text" name="company" placeholder="Company Name" required="" id = "company">
+                <input type="number" name="numEmps" placeholder="Number of Employees" required="" id = "numEmp">
+                <input type="text" name="address" placeholder="Company Address" required="" id = "address">
+                <input type="tel" name="phone" placeholder="Phone Number" required="" id = "phone">
+                <input type="email" name="email" placeholder="Email" required="" id = "email">
+            </form>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="subscribe">
+            <form id = "form2" action="#" method="post">
+                <input type="text" name="name" placeholder="Event Name" required="" id = "eventName">
+                <input type="number" name="numClients" placeholder="Number of Clients" required="" id = "numClients">
+                <h2>Activities:</h2>
+                <h3>Land</h3>
+                <select>    
+                    <option value="Hiking">Hiking</option>
+                    <option value="Obstacle Course Racing">Obstacle Course Racing</option>
+                    <option value="Mountain Biking">Mountain Biking</option>
+                    <option value="Backpacking">Backpacking</option>
+                    <option value="Camping">Camping</option>
+                </select>
+                <h3>Snow</h3>
+                <select>    
+                    <option value="Skiing">Skiing</option>
+                    <option value="Snowboading">Snowboading</option>
+                </select>
+                <h3>Water</h3>
+                <select>    
+                    <option value="Kayaking/Canoeing">Kayaking/Canoeing</option>
+                    <option value="Scuba/Snorkeling">Scuba/Snorkeling</option>
+                    <option value="Surfing">Surfing</option>
+                    <option value="Stand-up Paddlle Boarding">Stand-up Paddlle Boarding</option>
+                </select>
+                <input type="submit" value="submit" id = "submit">
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="main_in.js"></script>
+</body>
+</html>
